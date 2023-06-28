@@ -1,0 +1,58 @@
+ <!-- Insta Feed Section -->
+    <section class="insta-feed-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="insta-sec-title-box">
+                        <h1 class="insta-title" data-aos="fade-down" data-aos-duration="1500">{{ section.settings.heading }}</h1>
+                        <hr class="insta-title-line">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="insta-carousel-box">
+                        <div class="owl-carousel">
+                            <div>
+                                <img class="insta-img" src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/insta-img-1.png">
+                            </div>
+                            <div>
+                                <img class="insta-img" src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/insta-img-2.png">
+                            </div>
+                            <div>
+                                <img class="insta-img" src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/insta-img-3.png">
+                            </div>
+                            <div>
+                                <img class="insta-img" src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/insta-img-4.png">
+                            </div>
+                            <div>
+                                <img class="insta-img" src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/insta-img-5.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% schema %}
+  {
+    "name": "Home Instagram",
+    "settings": [
+      
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Main Heading"
+      }
+    ],
+  "presets": [
+    {
+      "name": "Home Instagram"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

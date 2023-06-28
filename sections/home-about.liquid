@@ -1,0 +1,59 @@
+ <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row about-row align-items-center">
+                <div class="col-md-6">
+                    <div class="about-img-box">
+                        <img class="about-img" src="{{ section.settings.image | img_url : 'master' }}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text-box">
+                        <h1 class="about-title">{{ section.settings.heading }}</h1>
+                        <hr class="about-title-line">
+                        <p class="about-desc">{{ section.settings.content }}</p>
+                        <a class="about-btn" href="{{ section.settings.url }}">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+{% schema %}
+  {
+    "name": "Image with side text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+     },
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Main Heading"
+      },
+      {
+        "type":"textarea",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"url",
+        "id":"url",
+        "label":"Button Text"
+      }
+    ],
+  "presets": [
+    {
+      "name": "Image with side text"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

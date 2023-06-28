@@ -1,0 +1,138 @@
+ <footer>
+        <section class="ft-section">
+            <div class="container">
+                <div class="row">
+                    <div class="form-container" data-aos="fade-up" data-aos-duration="2000">
+                        <h1 class="form-title">
+                            Contact Us Details
+                        </h1>
+                        {% comment %}
+  The following is the contact form HTML that you can modify to your liking. For more information, see:
+  https://help.shopify.com/en/themes/development/templates/customize-email-templates#contact-form
+{% endcomment %}
+
+{% form 'contact' %}
+  {% if form.posted_successfully? %}
+    <div class="alert alert--success" role="alert">
+      {% if form.success_message %}
+        {{ form.success_message }}
+      {% else %}
+        Thank you for contacting us. We'll get back to you as soon as possible.
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="row">
+    <div class="col-md-4">
+      <label for="ContactFormName" class="form-group">
+        <input type="text" id="ContactFormName" name="contact[name]" class="form-control fields" value="{{ form.name }}" placeholder="Name">
+      </label>
+    </div>
+
+    <div class="col-md-4">
+      <label for="ContactFormEmail" class="form-group">
+        <input type="email" id="ContactFormEmail" name="contact[email]" class="form-control fields" value="{{ form.email }}" placeholder="Email">
+      </label>
+    </div>
+
+    <div class="col-md-4">
+      <label for="ContactFormPhone" class="form-group">
+        <input type="tel" id="ContactFormPhone" name="contact[phone]" class="form-control fields" value="{{ form.phone }}" placeholder="Phone">
+      </label>
+    </div>
+
+    <div class="col-md-12">
+      <label for="ContactFormMessage" class="form-group">
+        <textarea id="ContactFormMessage" name="contact[body]" class="form-control field-textarea" rows="5" placeholder="Message">{{ form.body }}</textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="form-btn">Submit</button>
+  </div>
+{% endform %}
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="ft-logo-box">
+                            <img class="ft-logo" src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/ft-logo.png">
+                            <p class="ft-logo-desc">
+                                We are a women-owned e-commerce company specializing in beautifully handcrafted tabletop collections made with raffia palm. Our products are unique and are crafted by skilled women artisans who are dedicated to creating beautiful and sustainable products.
+                            </p>
+                            <ul class="social-icons">
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-linkedin"></i>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="ft-link-box">
+                            <h2 class="ft-head">Quick Links</h2>
+                            <ul class="ft-list">
+                                <a href="https://paytonjames.myshopify.com/pages/about">
+                                    <li>About Us</li>
+                                </a>
+                            
+                                <a href="https://paytonjames.myshopify.com/collections/new-arrivals">
+                                    <li>New Arrivals</li>
+                                </a>
+                                <a href="https://paytonjames.myshopify.com/pages/contact">
+                                    <li>Contact Us</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="ft-link-box">
+                            <h2 class="ft-head">Company</h2>
+                            <ul class="ft-list">
+                                <a href="https://paytonjames.myshopify.com/search">
+                                    <li>Search</li>
+                                </a>
+                               
+                                <a href="https://paytonjames.myshopify.com/collections/all">
+                                    <li>Stores</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="ft-link-box">
+                            <h2 class="ft-head">Contact Us</h2>
+                            <ul class="ft-list">
+                                <li>901- 515- 7785</li>
+                                <li>payton@paytonjamesusa.com</li>
+                                <li>
+                                    <form>
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <input type="email" class="form-control" id="ft-email-field"
+                                                        placeholder="Enter Your Email">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="footer-newsletter">
+                                                         <button type="submit" class="ft-form-btn"><img class="white-arrow"
+                                                            src="https://cdn.shopify.com/s/files/1/0745/0489/6813/files/white-arrow.png">
+                                                    </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <div class="copyright-box">
+        <p class="copyright-text">
+            © 2023 Payton James...All right reserved.
+        </p>
+    </div>

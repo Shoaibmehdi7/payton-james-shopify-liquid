@@ -1,0 +1,46 @@
+<!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-title-box">
+                        <h1 class="product-title">{{ section.settings.heading }}</h1>
+                        <hr class="product-title-line">
+                    </div>
+                </div>
+              {% assign products = collections['frontpage'].products %}
+{% for product in products limit: 8 %}
+                <div class="col-md-3">
+                    <div class="product-box">
+                        <img class="product-img" src="{{ product.featured_image.src | product_img_url: 'large' }}">
+                        <a href="{{ product.url }}" class="product-btn">Shop Now</a>
+                    </div>
+                </div>
+               {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- End Products Section -->
+{% schema %}
+  {
+    "name": "Home Product",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Main Heading"
+      }
+    ],
+  "presets": [
+    {
+      "name": "Home Product"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

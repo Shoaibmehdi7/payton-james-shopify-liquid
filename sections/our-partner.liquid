@@ -1,0 +1,52 @@
+<!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="partners-title-box">
+                        <h1 class="partner-title">{{ section.settings.heading }}</h1>
+                        <hr class="partner-title-line">
+                    </div>
+                </div>
+              {% for block in section.blocks %}
+                <div class="col-md-3">
+                    <div class="partner-img-box">
+                        <img class="partner-img" src="{{ block.settings.image | img_url : 'master' }}">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Partners Section -->
+{% schema %}
+  {
+    "name": "Our Partner",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Main Heading"
+      }
+    ],
+    "blocks": [
+       {
+         "name": "Logo",
+         "type": "slide",
+         "settings": [
+           {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+           }
+         ]
+       }
+     
+    ],
+  "presets": [
+    {
+      "name": "Our Partner"
+    }
+  ]
+  }
+{% endschema %}
